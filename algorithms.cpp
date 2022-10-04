@@ -457,5 +457,61 @@ int main(){
     cout<<num;   
     return 0;
 }
+Q9 diagonal difference:
+#include <bits/stdc++.h>
+#include<iostream>
+
+using namespace std;
+
+
+int main(){
+    int n;
+    cin>>n;
+    int arr[n][n];
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            cin>>arr[i][j];
+        }
+    }
+    int sum1=0,sum2=0;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if(i==j){
+                sum1+=arr[i][j];
+            }
+        if(i+j==n-1&&arr[1][1]){
+            sum2+=arr[i][j];
+        }
+        }
+    }
+     int diff=abs(sum1-sum2);
+     cout<<diff;
+     
+    return 0;
+}
+
+
+Q10 time conversion :
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+    string s;
+    cin>>s;
+    int hh,mm,ss;
+    int n= s.length();
+    hh=(s[0]-'0')*10+(s[1]-'0');
+    mm=(s[3]-'0')*10+(s[4]-'0');
+    ss=(s[6]-'0')*10+(s[7]-'0');
+    
+    if(hh<12&&s[8]=='P'){
+        hh=hh+12;
+    }
+    if(hh==12&&s[8]=='A'){
+        hh=0;
+    }
+    printf("%02d:%02d:%02d \n",hh,mm,ss);
+}
 
 
