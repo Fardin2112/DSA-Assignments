@@ -30,9 +30,9 @@ string appendAndDelete(string s, string t, int k) {
          step++;
         }
     }
-    int m=s.length()-step;
-    int n=t.length()-step;
-    if(k>=(m+n)){
+    int m=s.length()-step;// delete num
+    int n=t.length()-step;//appen num
+    if(k>=(m+n)){          //m+n became number of step of my converting  s& t
         return "Yes";
     }else {
     return "No";
